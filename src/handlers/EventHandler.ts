@@ -18,7 +18,6 @@ class EventHandler {
   }
 }
 
-// Registering events
 EventHandler.registerEvent(new UserEntryEvent());
 EventHandler.registerEvent(new UserExitEvent());
 

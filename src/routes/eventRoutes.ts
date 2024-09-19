@@ -4,9 +4,6 @@ import { User } from '../models/User';
 
 const router = express.Router();
 
-/**
- * Trigger User Entry Event
- */
 router.post('/user-entry', async (req: Request, res: Response) => {
   const user: User = req.body;
 
@@ -18,9 +15,6 @@ router.post('/user-entry', async (req: Request, res: Response) => {
   }
 });
 
-/**
- * Trigger User Exit Event
- */
 router.post('/user-exit', async (req: Request, res: Response) => {
   const user: User = req.body;
 
