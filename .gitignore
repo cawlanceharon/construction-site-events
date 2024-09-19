@@ -1,0 +1,15 @@
+# .gitignore
+
+# Environment Variables
+.env
+
+# Node Modules
+node_modules/
+
+# Build Output
+dist/
+
+# Logs
+*.log
+
+# Others
