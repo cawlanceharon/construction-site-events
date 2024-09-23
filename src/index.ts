@@ -3,6 +3,7 @@ dotenv.config();
 
 import express from 'express';
 import eventRoutes from './routes/eventRoutes';
+import initialRoutes from './routes/initialRoutes';
 import Logger from './utils/Logger';
 
 function validateEnvVariables() {
@@ -29,11 +30,11 @@ function validateEnvVariables() {
 validateEnvVariables();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use('/api/events', eventRoutes);
+app.use('', initialRoutes);
 
-app.listen(PORT, () => {
-  Logger.log(`Server is running on port ${PORT}`);
+app.listen(3000, '0.0.0.0', () => {
+  console.log('Server is running on port 3000');
 });
